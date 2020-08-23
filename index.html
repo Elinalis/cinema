@@ -9,73 +9,81 @@
   <link rel="stylesheet" href="css/icons.css">
   <link rel="stylesheet" href="css/media.css">
   <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap">
   <style>
   </style>
 </head>
 
 <body>
-
-  <header style="background: gray;">
-    <a href="https://innopolis.university/" target="_blank">
-      <img src="img/logo.png" alt="Университет Иннополис" title="Университет Иннополис">
-    </a>
-    <nav>
-      <ul>
-        <li><a href="#booktickets"> ЗАКАЗАТЬ БИЛЕТ</a></li>
-        <li><a href="#advantages"> ПРЕИМУЩЕСТВА</a></li>
-        <li><a href="#films"> ФИЛЬМЫ</a></li>
-        <li><a href="#contacts"> КОНТАКТЫ</a></li>
-      </ul>
-      <p>
-        <sub>Ваш город:</sub>
-        <a href="#"> <u>Москва</u></a>
-      </p>
-
-    </nav>
-  </header>
-
-  <section>
-    <h1>Закажите билет в кино</h1>
-    <h2><b>Всем покупателям подарок!</b></h2>
+  <div class="block01">
+          <header class="block01__top_menu">
+             <div>
+                <a id="logo" href="https://innopolis.university/" target="_blank">
+                  <img src="img/logo.png" alt="Университет Иннополис" title="Университет Иннополис">
+                </a>
+              </div>
+              <div>
+                <nav class="block01__nav text-right">
+                    <ul>
+                        <li><a href="#booktickets"> ЗАКАЗАТЬ БИЛЕТ</a></li>
+                        <li><a href="#advantages"> ПРЕИМУЩЕСТВА</a></li>
+                        <li><a href="#films"> ФИЛЬМЫ</a></li>
+                        <li><a href="#contacts"> КОНТАКТЫ</a></li>
+                    </ul>
+                </nav> 
+                  <div>
+                    <span>Ваш город:</span>
+                    <a href="#">Москва</a>
+               </div>
+            </div>
+          </header>
+    <div class="block01__main">
+      <h1 class="main-header1 text-center">Закажите билет в кино</h1>
+      <h2 class="main-header2 text-center"><b>Всем покупателям подарок!</b></h2>
     </div>
-  </section>
-
-  <section>
-       <div class="title">
-          <h3 class="title2">Добро пожаловать!</h3>
+  </div>
+  <div class="block02">
+      <div class="welcome-block-wrapper">
+              <h3 class="">Добро пожаловать!</h3>
+        <p>
+          Cumque dolorem eum harum laudantium libero molestias saepe soluta? Facere minima optio perferendis quibusdam quis
+          reprehenderit, saepe! Debitis enim optio saepe voluptatibus.
+        </p>
+        <p>
+          Cumque dolorem eum harum laudantium libero molestias saepe soluta? Facere minima optio perferendis quibusdam quis
+          reprehenderit, saepe! Debitis enim optio saepe voluptatibus.
+        </p>
       </div>
-    <p>
-      Cumque dolorem eum harum laudantium libero molestias saepe soluta? Facere minima optio perferendis quibusdam quis
-      reprehenderit, saepe! Debitis enim optio saepe voluptatibus.
-    </p>
-    <p>
-      Cumque dolorem eum harum laudantium libero molestias saepe soluta? Facere minima optio perferendis quibusdam quis
-      reprehenderit, saepe! Debitis enim optio saepe voluptatibus.
-    </p>
-  </section>
-
-  <section>
-    <h3 id="advantages" class="title">Почему мы?</h3>
+ </div>
+  <div class="container">
+    <h2 id="advantages" class="header2">Почему мы?</h2>
+    <div class="advantages__wrapper">
+    <div class="advantage__block">
     <img src="img/b2_icon_1.jpg" alt="Большие экраны" title="Большие экраны">
-    <h4 class="title3">Большие экраны</h4>
+    <h4 class="header3">Большие экраны</h4>
     <p>
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. At autem cum dolores dolorum eius error expedita illum
       itaque molestiae mollitia nemo, nostrum officia quas ratione tempora temporibus veritatis vero voluptates.
     </p>
+  </div>
+   <div class="advantage__block">
     <img src="img/b2_icon_2.jpg" alt="Объемный звук" title="Объемный звук">
-    <h4 class="title3">Объемный звук</h4>
+    <h4 class="header3">Объемный звук</h4>
     <p>Lorem ipsum dolor sit amet.</p>
-    <img src="img/b2_icon_3.jpg" alt="Удобные кресла" title="Удобные кресла">
-    <h4 class="title3">Удобные кресла</h4>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. At autem cum dolores dolorum eius error expedita illum
-      itaque molestiae mollitia nemo, nostrum officia quas ratione tempora temporibus veritatis vero voluptates.
-    </p>
-  </section>
+   </div>
+    <div class="advantage__block">
+      <img src="img/b2_icon_3.jpg" alt="Удобные кресла" title="Удобные кресла">
+      <h4 class="header3">Удобные кресла</h4>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. At autem cum dolores dolorum eius error expedita illum
+        itaque molestiae mollitia nemo, nostrum officia quas ratione tempora temporibus veritatis vero voluptates.
+      </p>
+    </div>
+  </div>
+  </div>
 
-  <section>
-    <div class="container">
+  <div class="container">
+    <div>
       <div class="movie-list">
       <h2 class="movie-list__header">Выберите фильм</h2>
         <table class="movie-list__table">
@@ -88,25 +96,25 @@
             </thead>
 
             <tbody>
-              <tr class="tableBody__row tableBody__row-dark">
+              <tr class="table-body__row table-body__row-dark">
                 <td class="table__row-time">10am - 12pm</td>
                 <td>Introduction and presentations about Envato</td>
                 <td><img src="icons/More icon.png" alt=""></td>
               </tr>
 
-              <tr class="tableBody__row tableBody__row-light">
+              <tr class="table-body__row table-body__row-light">
                 <td class="table__row-time">12pm - 02pm</td>
                 <td>Sessions by honorable guests and Speakers</td>
                 <td><img src="icons/More icon.png" alt=""></td>
               </tr>
 
-              <tr class="tableBody__row tableBody__row-dark-light">
+              <tr class="table-body__row table-body__row-dark-light">
                 <td class="table__row-time">02pm - 03pm</td>
                 <td>Break and Mingle time with the authors</td>
                 <td><img src="icons/More icon.png" alt=""></td>
               </tr>
              
-              <tr class="tableBody__row tableBody__row-light">
+              <tr class="table-body__row table-body__row-light">
                 <td class="table__row-time">03pm - 05pm</td>
                 <td>Portfolio Review, Rewards and Ending Presentation</td>
                 <td><img src="icons/More icon.png" alt=""></td>
@@ -124,115 +132,115 @@
           veritatis. Aliquam beatae, delectus dignissimos enim exercitationem mollitia nisi pariatur quaerat quam, qui
           quibusdam sunt!
         </p>
-  </section>
-  <section>
-    <img src="img/b4_img.jpg" alt="Подарок каждому!" title="Подарок каждому!">
-    <h4 class="title">Подарок каждому!</h4>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aperiam aspernatur, cum, cupiditate excepturi
-      expedita libero mollitia nesciunt nihil nobis obcaecati quasi ratione reprehenderit sequi sint, tenetur unde velit
-      veniam! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aperiam aspernatur, cum, cupiditate excepturi
-      expedita libero mollitia nesciunt nihil nobis obcaecati quasi ratione reprehenderit sequi sint, tenetur unde velit
-      veniam!
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aperiam aspernatur, cum, cupiditate excepturi
-        expedita libero mollitia nesciunt nihil nobis obcaecati quasi ratione reprehenderit sequi sint, tenetur unde
-        velit veniam!
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aperiam aspernatur, cum, cupiditate excepturi
-          expedita libero mollitia nesciunt nihil nobis obcaecati quasi ratione reprehenderit sequi sint, tenetur unde
-          velit veniam!
-  </section>
-
-  <section>
-    <h3 id="films" class="title">Фильмы</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci alias, animi, commodi eius ipsum,
-      laudantium neque nihil omnis perferendis sed sequi tempore! Ad ea esse ex inventore repudiandae, suscipit!
-      <br>
-      <br>
-      <br>
-      <div>
-        <img src="img/mov1.jpg">
-        <img src="img/mov2.jpg">
-        <img src="img/mov3.jpg">
-      </div>
-      <div>
-        <img src="img/mov1.jpg">
-        <img src="img/mov2.jpg">
-        <img src="img/mov3.jpg">
-      </div>
-      <div>
-        <img src="img/mov1.jpg">
-        <img src="img/mov2.jpg">
-        <img src="img/mov3.jpg">
-      </div>
-  </section>
-  <br>
-  <br>
-  <br>
-  <br>
-  <div>
-    <img src="img/1920x450.png" width="1510">
   </div>
-  <br>
-  <br>
-  <br>
-  <section>
-    <form action="order.php" enctype="multipart/form-data" id="booktickets">
+  <div class="container">
+      <img src="img/b4_img.png" alt="Подарок каждому!" title="Подарок каждому!">
+      <h2 class="header2">Подарок каждому!</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aperiam aspernatur, cum, cupiditate excepturi
+          expedita libero mollitia nesciunt nihil nobis obcaecati quasi ratione reprehenderit sequi sint, tenetur unde velit
+          veniam! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aperiam aspernatur, cum, cupiditate excepturi
+          expedita libero mollitia nesciunt nihil nobis obcaecati quasi ratione reprehenderit sequi sint, tenetur unde velit
+          veniam!
+       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aperiam aspernatur, cum, cupiditate excepturi
+            expedita libero mollitia nesciunt nihil nobis obcaecati quasi ratione reprehenderit sequi sint, tenetur unde
+            velit veniam!
+       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aperiam aspernatur, cum, cupiditate excepturi
+              expedita libero mollitia nesciunt nihil nobis obcaecati quasi ratione reprehenderit sequi sint, tenetur unde
+              velit veniam!
       <div>
-        <input type="text" placeholder="Имя*" name="login" required>
+        <button type="button" class="button">Получить подарок</button>
       </div>
-      <br>
-      <div>
-        <input type="email" placeholder="Email*" name="email" required>
-      </div>
-      <br>
-      <select name="some" id="" required>
-        <option value="1"> Выбор 1</option>
-        <option value="2"> Выбор 2</option>
-        <option value="3"> Выбор 3</option>
-        <option value="3"> Выбор 4</option>
-        <option value="3"> Выбор 5</option>
-        <option value="3"> Выбор 6</option>
-        <option value="3"> Выбор 7</option>
-        <option value="3"> Выбор 8</option>
-        <option value="3"> Выбор 9</option>
-        <option value="3"> Выбор 10</option>
-      </select>
-      <br>
-      <br>
-      <input type="radio" name="radio">
-      <input type="radio" name="radio">
-      <input type="radio" name="radio">
-      <br>
-      <br>
-      <textarea name="" placeholder="Комментарий" name="description">
-      </textarea>
-      <br>
-      <br>
-      <input type="checkbox" required>
-      <label for="rules">Я согласен на обработку персональных данных</label>
-      <br>
-      <br>
-      <input type="file">
-      <br>
-      <br>
-      <input type="submit" value="Заказать">
-    </form>
-  </section>
+   </div>
+   
+
+    <div class="container">
+        <h2 id="films" class="header2">Фильмы</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci alias, animi, commodi eius ipsum,
+            laudantium neque nihil omnis perferendis sed sequi tempore! Ad ea esse ex inventore repudiandae, suscipit!
+          <br>
+          <br>
+          <br>
+            <div>
+              <img src="img/mov1.jpg">
+              <img src="img/mov2.jpg">
+              <img src="img/mov3.jpg">
+            </div>
+            <div>
+              <img src="img/mov1.jpg">
+              <img src="img/mov2.jpg">
+              <img src="img/mov3.jpg">
+            </div>
+            <div>
+              <img src="img/mov1.jpg">
+              <img src="img/mov2.jpg">
+              <img src="img/mov3.jpg">
+            </div>
+    </div>
+  <br>
+  <br>
+  <br>
+  <br>
+    <div>
+      <img src="img/map.png" width="100%">
+    </div>
+  <br>
+  <br>
+  <br>
+  <div class="container">
+      <form action="order.php" enctype="multipart/form-data" id="booktickets">
+          <div>
+            <input type="text" placeholder="Имя*" name="login" required>
+          </div>
+          <br>
+          <div>
+            <input type="email" placeholder="Email*" name="email" required>
+          </div>
+          <br>
+            <select name="some" id="" required>
+              <option value="1"> Выбор 1</option>
+              <option value="2"> Выбор 2</option>
+              <option value="3"> Выбор 3</option>
+              <option value="3"> Выбор 4</option>
+              <option value="3"> Выбор 5</option>
+              <option value="3"> Выбор 6</option>
+              <option value="3"> Выбор 7</option>
+              <option value="3"> Выбор 8</option>
+              <option value="3"> Выбор 9</option>
+              <option value="3"> Выбор 10</option>
+            </select>
+          <br>
+          <br>
+          <input type="radio" name="radio">
+          <input type="radio" name="radio">
+          <input type="radio" name="radio">
+          <br>
+          <br>
+          <textarea name="" placeholder="Комментарий" name="description">
+          </textarea>
+          <br>
+          <br>
+          <input type="checkbox" required>
+          <label for="rules">Я согласен на обработку персональных данных</label>
+          <br>
+          <br>
+          <input type="submit" class="button" value="Заказать">
+      </form>
+  </div>
   <br>
 
   <footer>
-    <div id="contacts">
-      <a href="https://www.facebook.com/" title="facebook" target="_blank">
-        facebook</a>
-      <a href="https://twitter.com/" title="twitter" target="_blank">
-        twitter</a>
-      <a href="https://www.instagram.com/" title="instagram" target="_blank">
-        instagram</a>
-      <a href="https://mail.google.com/mail/" title="gmail" target="_blank">
-        gmail</a>
-    </div>
+      <div id="contacts" class="container">
+        <a href="https://www.facebook.com/" title="facebook" target="_blank">
+          facebook</a>
+        <a href="https://twitter.com/" title="twitter" target="_blank">
+          twitter</a>
+        <a href="https://www.instagram.com/" title="instagram" target="_blank">
+          instagram</a>
+        <a href="https://mail.google.com/mail/" title="gmail" target="_blank">
+          gmail</a>
     <br>
-    <i>Иннополис, 2020</i>
-    </div>
+      <i>Иннополис, 2020</i>
+      </div>
   </footer>
 </body>
 
