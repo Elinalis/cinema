@@ -132,6 +132,13 @@
     font-style: normal;
 }
 
+/**Сетка макета*/
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding-top: 220px;
+}
 
 /**Общие стили*/
 
@@ -155,7 +162,7 @@ img {
 
 input, textarea, select {
     font-family: 'Roboto', sans-serif;
-    font-size: 19px;
+    font-size: 12px;
     color: #6c6c6c;
     padding: 15px 11px;
     border: 1px solid #bebebe;
@@ -186,7 +193,7 @@ select {
 
 p {
     line-height: 1.2;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 300;
  }
 
@@ -197,19 +204,18 @@ p {
 }
 
 .block-top__menu {
-    padding-top: 70px;
-    padding-left: 170px;
+    padding-top: 64px;
+    padding-left: 203px;
 }
 
 .block-top__main {
-    padding: 190px 0 100px;
+    padding: 198px 0 100px;
     text-align: center;
 }
 
 .block-top__logo {
     display: inline-block;
     float: left;
-
 }
 
 .block-top__nav li {
@@ -219,11 +225,11 @@ p {
 }
 
 nav li:first-child {
-    padding-left: 330px;
+    padding-left: 293px;
 }
 
 .block-top__nav li + li {
-    margin-left: 44px;
+    margin-left: 40px;
 }
 
 .block-top__nav a {
@@ -259,62 +265,87 @@ nav li:first-child {
 }
 
 .main-header1 {
-    font-size: 80px;
+    font-size: 88px;
     color: #ffffff;
     font-weight: 100;
     font-style: normal;
 }
 
 .main-header2 {
-    font-size: 50px;
+    line-height: 1.5;
+    font-size: 55px;
     color: #ffffff;
     font-weight: 400;
+}
+
+
+.header2 {
+    font-size: 55px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.header3 {
+    font-size: 38px;
+    font-weight: 900;
+    margin-bottom: 23px;
+}
+
+.header4 {
+    font-size: 45px;
+    line-height: 1.2;
+    font-weight: 700;
+    margin-bottom: 35px;
 }
 
 .block-advantages {
     position: relative;
 }
 
-.header2 {
-    font-size: 50px;
-    font-weight: 700;
-    margin-bottom: 30px;
+.welcome-block-wrapper {
+    width: 475px;
+    box-shadow: 0px 1px 2px 0px rgba(35, 31, 32, 0.65);
+    position: absolute;
+    top: -10px;
+    background-color: #fff;
+    right: 187px;
+    padding: 32px 65px 40px 32px;
 }
 
-.header3 {
-    font-size: 35px;
-    font-weight: 900;
-    margin-bottom: 30px;
+.advantages__list {
+    width: 33.33%;
+    float: left;
+    text-align: center;
+    padding: 25px;
 }
 
-.header4 {
-    font-size: 40px;
-    font-weight: 700;
-    margin-bottom: 35px;
+.advantages__img {
+    padding-top: 100px;
+    padding-bottom: 30px;
+    display:block;
+    margin:auto;
+    width:220px;
+    height:230px;
 }
 
-.advantage__block {
-    width: 32%;
+#img_advantage_3 {
+    padding-top: 132px;
+    height: 200px;
 }
 
 .advantages__wrapper {
     display: flex;
 }
 
-.welcome-block-wrapper {
-    width: 420px;
-    box-shadow: 0 0 5px;
-    position: absolute;
-    top: -50px;
-    background-color: #fff;
-    right: 230px;
-    padding: 32px 65px 40px 32px;
+.block__table {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding-top: 5px;
 }
-
 
 .movie-list__header{
     color: #252525;
-    font-size: 50px;
+    font-size: 55px;
     text-align: center;
     font-weight: 700;
     margin: 90px;
@@ -334,15 +365,15 @@ nav li:first-child {
     background: #a3cc40;
     font-size: 30px;
     font-weight: 700;
-    height: 75px;
+    height: 84px;
 }
 
 .table-body__row {
     color: #ffffff; 
-    font-size: 22px;
+    font-size: 24px;
     vertical-align: center;
     font-family: Roboto;
-    height: 75px;
+    height: 84px;
 }
 
 .table-body__row .table__row-time {
@@ -366,13 +397,7 @@ th, td {padding: 20px 20px;}
 
 #left { text-align: left; }
 
-/**Сетка макета*/
-
-.container{
-    max-width: 1060px;
-    margin: 0 auto;
-    padding: 0 15px;
+.table__text-after {
+    text-align: center;
+    padding-top: 40px;
 }
-
-
-
