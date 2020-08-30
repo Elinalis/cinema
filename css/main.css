@@ -137,7 +137,6 @@
 .container {
     max-width: 1140px;
     margin: 0 auto;
-    padding-top: 220px;
 }
 
 /**Общие стили*/
@@ -162,7 +161,7 @@ img {
 
 input, textarea, select {
     font-family: 'Roboto', sans-serif;
-    font-size: 12px;
+    font-size: 11px;
     color: #6c6c6c;
     padding: 15px 11px;
     border: 1px solid #bebebe;
@@ -183,8 +182,8 @@ select {
 
 .button {
  display: inline-block;
- padding: 16px 30px;
- font-size: 18px;
+ padding: 20px 39px;
+ font-size: 20px;
  color: #fff;
  background-color: rgb(144, 210, 61);
  border-radius: 15px;
@@ -201,6 +200,17 @@ p {
 .block-top {
     background: url("../img/top_bg.jpg") no-repeat top center / cover;
     min-height: 100vh;
+    position: relative;
+}
+
+.block-top::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-left: 100vw solid transparent;
+    border-bottom: 5.55rem solid #fff;
 }
 
 .block-top__menu {
@@ -209,7 +219,8 @@ p {
 }
 
 .block-top__main {
-    padding: 198px 0 100px;
+    padding: 12.2rem 0 25rem;
+    line-height: 100px;
     text-align: center;
 }
 
@@ -299,6 +310,7 @@ nav li:first-child {
 }
 
 .block-advantages {
+    padding-top: 100px;
     position: relative;
 }
 
@@ -306,7 +318,7 @@ nav li:first-child {
     width: 475px;
     box-shadow: 0px 1px 2px 0px rgba(35, 31, 32, 0.65);
     position: absolute;
-    top: -10px;
+    top: -130px;
     background-color: #fff;
     right: 187px;
     padding: 32px 65px 40px 32px;
@@ -357,27 +369,63 @@ nav li:first-child {
     border-radius: 15px;
     overflow: hidden;
     vertical-align: top;
-    
 }
    
 .movie-list__table th {
     color: #ffffff; 
     background: #a3cc40;
-    font-size: 30px;
+    font-size: 33px;
     font-weight: 700;
     height: 84px;
+    width: 55px;
+}
+
+.movie-list__time {
+    padding-left: 90px;
+    text-align: left;
+    position: relative;
+}
+
+.movie-list__time::after {
+    content: ''; 
+    position: absolute;
+    left: 186px;
+    bottom: 20px;
+    border: 11px solid transparent;
+    border-top: 15px solid #ffffff;
+}
+
+.movie-list__stuff {
+    text-align: left;
+    position: relative;
+}
+
+.movie-list__stuff::after {
+    content: '';
+    position: absolute;
+    left: 338px;
+    bottom: 31px;
+    border: 11px solid transparent;
+    border-bottom: 15px solid #ffffff;
 }
 
 .table-body__row {
     color: #ffffff; 
-    font-size: 24px;
+    font-size: 25px;
     vertical-align: center;
     font-family: Roboto;
-    height: 84px;
+    height: 83px;
 }
 
+
 .table-body__row .table__row-time {
-    text-align: center;
+    text-align: left;
+    padding-left: 48px;
+}
+
+.table__row-button {
+    padding-left: 63px;
+    width: 14px;
 }
 
 .table-body__row-dark {
@@ -395,9 +443,172 @@ nav li:first-child {
 
 th, td {padding: 20px 20px;}
 
-#left { text-align: left; }
 
 .table__text-after {
     text-align: center;
+    padding: 40px 100px
+}
+
+.block-gift {
+    margin-top: 130px;
+    background: url("../img/b4_bg.jpg") no-repeat top center / cover;
+    min-height: 100vh;  
+    position: relative;
+}
+
+.block-gift::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-left: 100vw solid transparent;
+    border-bottom: 8.55rem solid #fff;
+}
+  
+.block-gift::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-right: 100vw solid transparent;
+    border-top: 8.55rem solid #fff;
+}
+
+.block-gift__img {
+    position: absolute;
+    height: 380x;
+    width: 380px;
+}
+
+.block-gift__header {
+    font-size: 55px;
+    color: #ffffff;
+    font-weight: 900;
+    padding-top: 155px;
+    text-align: right;
+}
+
+.block-gift__text {
+    color: #ffffff;
+    text-align: right;
+    font-size: 15.5px;
+    font-weight: 300;
+    padding-top: 65px;
+    padding-left: 390px;
+    width: 750px;
+}
+
+.block-gift__button {
+    position: absolute;
     padding-top: 40px;
+    padding-left: 900px;
+}
+
+.block-films__header {
+    font-size: 55px;
+    font-weight: 700;
+    padding-top: 150px;
+    padding-bottom: 45px;
+    padding-left: 35px;
+}
+
+.block-films__text {
+    padding-left: 35px;
+    padding-bottom: 45px;
+}
+
+.block-films {
+    padding-bottom: 95px;
+}
+
+.block-films__table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.block-films__movie {
+    padding: 42px;
+}
+
+.block-films__movie:hover .block-films__table__description {
+    transform: translateY(0%);
+}
+
+.block-films__table__description {
+    position: absolute;
+    border-radius: 15px;
+    background-color: rgb(144, 210, 61, .5);
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    padding: 24px;
+    transform: translateY(100%);
+    transition: 0.2s;
+}
+
+.block-films__relative {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.block-films__table__bg {
+    display: block;
+}
+
+.block-films__table__header{
+    font-size: 35px;
+    font-weight: 900;
+    color: #ffffff;
+    margin-bottom: 13px;
+}
+
+.block-films__table__text {
+    font-size: 18px;
+    font-weight: 500;
+    color: #ffffff;
+    line-height: 1.4;
+}
+
+.block-films__table__sep {
+    width: 84px;
+    height: 6px;
+    background: #ffffff;
+    margin-bottom: 13px;
+}
+
+.block-films__table__links {
+    position: absolute;
+    bottom: 24px;
+    left: 24px;
+}
+
+.icon {
+    display: inline-block;
+}
+
+.map-block {
+    width: 100%;
+    background: #90d23d;
+    height: 230px;
+    text-align: center;
+}
+
+.map-block__icon {
+    padding-top: 65px;
+}
+
+.map-block__text {
+    padding-top: 35px;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.icon-footer {
+    display: inline-block;
+    padding-left: 10px;
 }

@@ -86,8 +86,8 @@
         <table class="movie-list__table">
             <thead>
               <tr>
-                <th>Time</th>
-                <th id="left">Stuff that will happen</th>
+                <th class="movie-list__time">Time</th>
+                <th class="movie-list__stuff">Stuff that will happen</th>
                 <th></th>
               </tr>
             </thead>
@@ -96,25 +96,25 @@
               <tr class="table-body__row table-body__row-dark">
                 <td class="table__row-time">10am - 12pm</td>
                 <td>Introduction and presentations about Envato</td>
-                <td><img src="icons/More icon.png" alt=""></td>
+                <td class="table__row-button"><img src="icons/More icon.png" alt=""></td>
               </tr>
 
               <tr class="table-body__row table-body__row-light">
                 <td class="table__row-time">12pm - 02pm</td>
                 <td>Sessions by honorable guests and Speakers</td>
-                <td><img src="icons/More icon.png" alt=""></td>
+                <td class="table__row-button"><img src="icons/More icon.png" alt=""></td>
               </tr>
 
               <tr class="table-body__row table-body__row-dark-light">
                 <td class="table__row-time">02pm - 03pm</td>
                 <td>Break and Mingle time with the authors</td>
-                <td><img src="icons/More icon.png" alt=""></td>
+                <td class="table__row-button"><img src="icons/More icon.png" alt=""></td>
               </tr>
              
               <tr class="table-body__row table-body__row-light">
                 <td class="table__row-time">03pm - 05pm</td>
                 <td>Portfolio Review, Rewards and Ending Presentation</td>
-                <td><img src="icons/More icon.png" alt=""></td>
+                <td class="table__row-button"><img src="icons/More icon.png" alt=""></td>
               </tr>
 
             </tbody>
@@ -125,121 +125,295 @@
       </div>
     </div>
         <p class="table__text-after">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid eum facere obcaecati quam rem repellendus
-          veritatis. Aliquam beatae, delectus dignissimos enim exercitationem mollitia nisi pariatur quaerat quam, qui
-          quibusdam sunt!
+          Please keep in mind that the timings may differ according to the flow of the event. The even is actually day long and we do plan to finish it within our set time but it doesn’t have to be, if we all agree to hangour for some time more, what harm could it do? :)
         </p>
   </div>
-  <div class="container">
-      <img src="img/b4_img.png" alt="Подарок каждому!" title="Подарок каждому!">
-      <h2 class="header2">Подарок каждому!</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aperiam aspernatur, cum, cupiditate excepturi
-          expedita libero mollitia nesciunt nihil nobis obcaecati quasi ratione reprehenderit sequi sint, tenetur unde velit
-          veniam! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aperiam aspernatur, cum, cupiditate excepturi
-          expedita libero mollitia nesciunt nihil nobis obcaecati quasi ratione reprehenderit sequi sint, tenetur unde velit
-          veniam!
-       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aperiam aspernatur, cum, cupiditate excepturi
-            expedita libero mollitia nesciunt nihil nobis obcaecati quasi ratione reprehenderit sequi sint, tenetur unde
-            velit veniam!
-       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aperiam aspernatur, cum, cupiditate excepturi
-              expedita libero mollitia nesciunt nihil nobis obcaecati quasi ratione reprehenderit sequi sint, tenetur unde
-              velit veniam!
-      <div>
-        <button type="button" class="button">Получить подарок</button>
-      </div>
-   </div>
-   
-
+  <div class="block-gift">
     <div class="container">
-        <h2 id="films" class="header2">Фильмы</h2>
+        <img class="block-gift__img" src="img/b4_img.png" alt="Подарок каждому!" title="Подарок каждому!">
+        <div class="block-gift__header">
+        <h2>Подарок каждому!</h2>
+        </div>
+        <div class="block-gift__text">
+            <p>Are you an Elite author in the Envato Marketplaces? If so we are proud of you! We want to give our thanks in achieving great success in the marketplace and we want to make known to the people of our country that you are amazing! Our Elite gifting program includes giving you special merchandize from our community and also promote your works in our community.
+            </p>
+            <br>
+            <p>
+            All you have to do is contact us by clicking the button here and then its just going to the event, saying something motivational and taking that swag while looking amazing infront of thousands of other community members.
+            </p>
+            <br>
+            <p>
+              *Be advised, we will only give you Elite thank you swag for each level of elite you cross. 
+              <br>That means if you do not cross to the next elite level before the next event, you cannot claim your prizes.
+           </p>
+          </div>
+        <div class="block-gift__button">
+          <button type="button" class="button">Получить подарок</button>
+        </div>
+    </div>
+  </div> 
+
+  <div class="block-films">
+    <div class="container">
+        <h2 id="films" class="block-films__header">Фильмы</h2>
+        <div class="block-films__text">
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci alias, animi, commodi eius ipsum,
             laudantium neque nihil omnis perferendis sed sequi tempore! Ad ea esse ex inventore repudiandae, suscipit!
-          <br>
-          <br>
-          <br>
-            <div>
-              <img src="img/mov1.jpg">
-              <img src="img/mov2.jpg">
-              <img src="img/mov3.jpg">
-            </div>
-            <div>
-              <img src="img/mov1.jpg">
-              <img src="img/mov2.jpg">
-              <img src="img/mov3.jpg">
-            </div>
-            <div>
-              <img src="img/mov1.jpg">
-              <img src="img/mov2.jpg">
-              <img src="img/mov3.jpg">
-            </div>
+          </p>
+         </div>
+            <table class="block-films__table">
+                <tr>
+                <td class="block-films__movie">
+                  <div class="block-films__relative">
+                    <div class="block-films__table__bg"><img class="link-img" src="img/mov1.jpg"></div>
+                      <div class="block-films__table__description">
+                        <div class="block-films__table__header">Человек-паук</div>
+                        <div class="block-films__table__sep"></div>
+                        <div class="block-films__table__text">More about selling in the Envato Marketplaces</div>
+                        <div class="block-films__table__links">
+                          <a href='https://www.facebook.com/' target="_blank"><i class="icon icon-facebook" title="facebook">
+                            <img src="icons/facebook.png">
+                          </i></a>
+                          <a href='https://twitter.com/' target="_blank"><i class="icon icon-twitter" title="twitter">
+                            <img src="icons/twitter.png">
+                          </i></a>
+                          <a href='https://www.behance.net/' target="_blank"><i class="icon icon-behance" title="behance">
+                            <img src="icons/behance.png">
+                          </i></a>
+                          <a href='https://dribbble.com/' target="_blank"><i class="icon icon-dribbble" title="dribbble">
+                            <img src="icons/dribbble.png">
+                          </i></a>
+                        </div>
+                   </div>
+               </div> 
+              </td>
+                <td class="block-films__movie">
+                  <div class="block-films__relative">
+                    <div class="block-films__table__bg"><img class="link-img" src="img/mov2.jpg"></div>
+                      <div class="block-films__table__description">
+                        <div class="block-films__table__header">Собачья жизнь-2</div>
+                        <div class="block-films__table__sep"></div>
+                        <div class="block-films__table__text">More about selling in the Envato Marketplaces</div>
+                        <div class="block-films__table__links">
+                          <a href='https://www.facebook.com/' target="_blank"><i class="icon icon-facebook" title="facebook">
+                            <img src="icons/facebook.png">
+                          </i></a>
+                          <a href='https://twitter.com/' target="_blank"><i class="icon icon-twitter" title="twitter">
+                            <img src="icons/twitter.png">
+                          </i></a>
+                          <a href='https://www.behance.net/' target="_blank"><i class="icon icon-behance" title="behance">
+                            <img src="icons/behance.png">
+                          </i></a>
+                          <a href='https://dribbble.com/' target="_blank"><i class="icon icon-dribbble" title="dribbble">
+                            <img src="icons/dribbble.png">
+                          </i></a>
+                        </div>
+                    </div>
+                </div>
+              </td>
+                <td class="block-films__movie">
+                  <div class="block-films__relative">
+                    <div class="block-films__table__bg"><img class="link-img" src="img/mov3.jpg"></div>
+                      <div class="block-films__table__description">
+                        <div class="block-films__table__header">Люди в черном: Интернэшнл</div>
+                         <div class="block-films__table__sep"></div>
+                         <div class="block-films__table__text">More about selling in the Envato Marketplaces</div>
+                         <div class="block-films__table__links">
+                          <a href='https://www.facebook.com/' target="_blank"><i class="icon icon-facebook" title="facebook">
+                            <img src="icons/facebook.png">
+                          </i></a>
+                          <a href='https://twitter.com/' target="_blank"><i class="icon icon-twitter" title="twitter">
+                            <img src="icons/twitter.png">
+                          </i></a>
+                          <a href='https://www.behance.net/' target="_blank"><i class="icon icon-behance" title="behance">
+                            <img src="icons/behance.png">
+                          </i></a>
+                          <a href='https://dribbble.com/' target="_blank"><i class="icon icon-dribbble" title="dribbble">
+                            <img src="icons/dribbble.png">
+                          </i></a>
+                        </div>
+                    </div>
+               </div> 
+              </td>
+                </tr>
+                <tr>
+                  <td class="block-films__movie">
+                    <div class="block-films__relative">
+                      <div class="block-films__table__bg"><img class="link-img" src="img/mov1.jpg"></div>
+                        <div class="block-films__table__description">
+                        <div class="block-films__table__header">Человек-паук</div>
+                        <div class="block-films__table__sep"></div>
+                        <div class="block-films__table__text">More about selling in the Envato Marketplaces</div>
+                        <div class="block-films__table__links">
+                          <a href='https://www.facebook.com/' target="_blank"><i class="icon icon-facebook" title="facebook">
+                            <img src="icons/facebook.png">
+                          </i></a>
+                          <a href='https://twitter.com/' target="_blank"><i class="icon icon-twitter" title="twitter">
+                            <img src="icons/twitter.png">
+                          </i></a>
+                          <a href='https://www.behance.net/' target="_blank"><i class="icon icon-behance" title="behance">
+                            <img src="icons/behance.png">
+                          </i></a>
+                          <a href='https://dribbble.com/' target="_blank"><i class="icon icon-dribbble" title="dribbble">
+                            <img src="icons/dribbble.png">
+                          </i></a>
+                       </div>
+                    </div>
+               </div> 
+                </td>
+                  <td class="block-films__movie">
+                    <div class="block-films__relative">
+                      <div class="block-films__table__bg"><img class="link-img" src="img/mov2.jpg"></div>
+                        <div class="block-films__table__description">
+                        <div class="block-films__table__header">Собачья жизнь-2</div>
+                        <div class="block-films__table__sep"></div>
+                        <div class="block-films__table__text">More about selling in the Envato Marketplaces</div>
+                        <div class="block-films__table__links">
+                          <a href='https://www.facebook.com/' target="_blank"><i class="icon icon-facebook" title="facebook">
+                            <img src="icons/facebook.png">
+                          </i></a>
+                          <a href='https://twitter.com/' target="_blank"><i class="icon icon-twitter" title="twitter">
+                            <img src="icons/twitter.png">
+                          </i></a>
+                          <a href='https://www.behance.net/' target="_blank"><i class="icon icon-behance" title="behance">
+                            <img src="icons/behance.png">
+                          </i></a>
+                          <a href='https://dribbble.com/' target="_blank"><i class="icon icon-dribbble" title="dribbble">
+                            <img src="icons/dribbble.png">
+                          </i></a>
+                      </div>
+                  </div>
+                </div>
+                  </td>
+                  <td class="block-films__movie">
+                    <div class="block-films__relative">
+                      <div class="block-films__table__bg"><img class="link-img" src="img/mov3.jpg"></div>
+                        <div class="block-films__table__description">
+                        <div class="block-films__table__header">Люди в черном: Интернэшнл</div>
+                        <div class="block-films__table__sep"></div>
+                        <div class="block-films__table__text">More about selling in the Envato Marketplaces</div>
+                        <div class="block-films__table__links">
+                          <a href='https://www.facebook.com/' target="_blank"><i class="icon icon-facebook" title="facebook">
+                            <img src="icons/facebook.png">
+                          </i></a>
+                          <a href='https://twitter.com/' target="_blank"><i class="icon icon-twitter" title="twitter">
+                            <img src="icons/twitter.png">
+                          </i></a>
+                          <a href='https://www.behance.net/' target="_blank"><i class="icon icon-behance" title="behance">
+                            <img src="icons/behance.png">
+                          </i></a>
+                          <a href='https://dribbble.com/' target="_blank"><i class="icon icon-dribbble" title="dribbble">
+                            <img src="icons/dribbble.png">
+                          </i></a>
+                      </div>
+                    </div>
+                 </div> 
+                </td>
+                  </tr>
+                  <tr>
+                    <td class="block-films__movie">
+                      <div class="block-films__relative">
+                        <div class="block-films__table__bg"><img class="link-img" src="img/mov1.jpg"></div>
+                          <div class="block-films__table__description">
+                          <div class="block-films__table__header">Человек-паук</div>
+                          <div class="block-films__table__sep"></div>
+                          <div class="block-films__table__text">More about selling in the Envato Marketplaces</div>
+                          <div class="block-films__table__links">
+                            <a href='https://www.facebook.com/' target="_blank"><i class="icon icon-facebook" title="facebook">
+                              <img src="icons/facebook.png">
+                            </i></a>
+                            <a href='https://twitter.com/' target="_blank"><i class="icon icon-twitter" title="twitter">
+                              <img src="icons/twitter.png">
+                            </i></a>
+                            <a href='https://www.behance.net/' target="_blank"><i class="icon icon-behance" title="behance">
+                              <img src="icons/behance.png">
+                            </i></a>
+                            <a href='https://dribbble.com/' target="_blank"><i class="icon icon-dribbble" title="dribbble">
+                              <img src="icons/dribbble.png">
+                            </i></a>
+                       </div>
+                     </div>
+                  </div>  
+                </td>
+                    <td class="block-films__movie">
+                      <div class="block-films__relative">
+                        <div class="block-films__table__bg"><img class="link-img" src="img/mov2.jpg"></div>
+                          <div class="block-films__table__description">
+                          <div class="block-films__table__header">Собачья жизнь-2</div>
+                          <div class="block-films__table__sep"></div>
+                          <div class="block-films__table__text">More about selling in the Envato Marketplaces</div>
+                          <div class="block-films__table__links">
+                            <a href='https://www.facebook.com/' target="_blank"><i class="icon icon-facebook" title="facebook">
+                              <img src="icons/facebook.png">
+                            </i></a>
+                            <a href='https://twitter.com/' target="_blank"><i class="icon icon-twitter" title="twitter">
+                              <img src="icons/twitter.png">
+                            </i></a>
+                            <a href='https://www.behance.net/' target="_blank"><i class="icon icon-behance" title="behance">
+                              <img src="icons/behance.png">
+                            </i></a>
+                            <a href='https://dribbble.com/' target="_blank"><i class="icon icon-dribbble" title="dribbble">
+                              <img src="icons/dribbble.png">
+                            </i></a>
+                          </div>
+                      </div>
+                  </div>  
+                 </td>
+                    <td class="block-films__movie">
+                      <div class="block-films__relative">
+                        <div class="block-films__table__bg"><img class="link-img" src="img/mov3.jpg"></div>
+                         <div class="block-films__table__description">
+                        <div class="block-films__table__header">Люди в черном: Интернэшнл</div>
+                        <div class="block-films__table__sep"></div>
+                        <div class="block-films__table__text">More about selling in the Envato Marketplaces</div>
+                        <div class="block-films__table__links">
+                          <a href='https://www.facebook.com/' target="_blank"><i class="icon icon-facebook" title="facebook">
+                            <img src="icons/facebook.png">
+                          </i></a>
+                          <a href='https://twitter.com/' target="_blank"><i class="icon icon-twitter" title="twitter">
+                            <img src="icons/twitter.png">
+                          </i></a>
+                          <a href='https://www.behance.net/' target="_blank"><i class="icon icon-behance" title="behance">
+                            <img src="icons/behance.png">
+                          </i></a>
+                          <a href='https://dribbble.com/' target="_blank"><i class="icon icon-dribbble" title="dribbble">
+                            <img src="icons/dribbble.png">
+                          </i></a>
+                        </div>
+                      </div>
+                    </div> 
+                   </td>
+                 </tr>
+            </table>
     </div>
+ </div>
 </main>
-  <br>
-  <br>
-  <br>
-  <br>
     <div>
       <img src="img/map.png" width="100%">
     </div>
-  <br>
-  <br>
-  <br>
-  <div class="container">
-      <form action="order.php" enctype="multipart/form-data" id="booktickets">
-          <div>
-            <input type="text" placeholder="Имя*" name="login" required>
-          </div>
-          <br>
-          <div>
-            <input type="email" placeholder="Email*" name="email" required>
-          </div>
-          <br>
-            <select name="some" id="" required>
-              <option value="1"> Выбор 1</option>
-              <option value="2"> Выбор 2</option>
-              <option value="3"> Выбор 3</option>
-              <option value="3"> Выбор 4</option>
-              <option value="3"> Выбор 5</option>
-              <option value="3"> Выбор 6</option>
-              <option value="3"> Выбор 7</option>
-              <option value="3"> Выбор 8</option>
-              <option value="3"> Выбор 9</option>
-              <option value="3"> Выбор 10</option>
-            </select>
-          <br>
-          <br>
-          <input type="radio" name="radio">
-          <input type="radio" name="radio">
-          <input type="radio" name="radio">
-          <br>
-          <br>
-          <textarea name="" placeholder="Комментарий" name="description">
-          </textarea>
-          <br>
-          <br>
-          <input type="checkbox" required>
-          <label for="rules">Я согласен на обработку персональных данных</label>
-          <br>
-          <br>
-          <input type="submit" class="button" value="Заказать">
-      </form>
-  </div>
-  <br>
-
   <footer>
-      <div id="contacts" class="container">
-        <a href="https://www.facebook.com/" title="facebook" target="_blank">
-          facebook</a>
-        <a href="https://twitter.com/" title="twitter" target="_blank">
-          twitter</a>
-        <a href="https://www.instagram.com/" title="instagram" target="_blank">
-          instagram</a>
-        <a href="https://mail.google.com/mail/" title="gmail" target="_blank">
-          gmail</a>
-    <br>
-      <i>Иннополис, 2020</i>
+      <div class="map-block">
+          <div class="map-block__icon">
+          <a href='https://www.facebook.com/' target="_blank"><i class="icon-footer icon-facebook2" title="facebook">
+            <img src="icons/facebook2.png">
+          </i></a>
+          <a href='https://twitter.com/' target="_blank"><i class="icon-footer icon-twitter2" title="twitter">
+            <img src="icons/twitter2.png">
+          </i></a>
+          <a href='#' target="_blank"><i class="icon-footer icon-linkedin" title="linkedin">
+            <img src="icons/linkedin.png">
+          </i></a>
+          <a href='https://myaccount.google.com/' target="_blank"><i class="icon-footer icon-google-plus" title="google plus">
+            <img src="icons/google plus.png">
+          </i></a>
+          <a href='https://www.tumblr.com/' target="_blank"><i class="icon-footer icon-tumblr" title="tumblr">
+            <img src="icons/tumblr.png">
+          </i></a>
+        </div>
+        <div class="map-block__text">
+          <p>Hope we see you at the event! <br> All Rights Reserved. Envato Bangladesh © 2015</p>
+        </div>
       </div>
-  </footer>
+  <footer>   
 </body>
-
 </html>
