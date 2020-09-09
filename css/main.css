@@ -138,6 +138,7 @@
     max-width: 57rem;
     margin: 0 auto;
     padding: 0 1.5rem;
+    position: relative;
 }
 
 /**Общие стили*/
@@ -326,20 +327,45 @@ nav li:first-child {
     width: 21.75rem;
     box-shadow: 0px 1px 2px 0px rgba(35, 31, 32, 0.65);
     position: absolute;
-    top: -6.5rem;
+    top: -10.5rem;
     background-color: #fff;
-    right: 6.35rem;
+    right: 4.35rem;
     padding: 1.6rem 3.25rem 2rem 1.6rem;
 }
 
 .advantages__wrapper {
+    padding-top: 4.4rem;
     display: flex;
+    flex: 0 0 33.33%;
+    align-items: center;
+    margin: 0 0.75rem;  
 }
 
 .advantages__list {
-
+    padding: 0 0.75rem;
 }
 
+.advantages__header {
+    font-size: 1.9rem;
+    font-weight: 900;
+    margin-bottom: 1.15rem;
+    text-align: center;
+    flex: 1;
+    
+}
+
+.advantages__img {
+    margin-bottom: 0.75rem;
+    height: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.advantages__img img {
+    display: block;
+}
+    
 .block__table {
     max-width: 57rem;
     margin: 0 auto;
@@ -351,7 +377,7 @@ nav li:first-child {
     font-size: 2.75rem;
     text-align: center;
     font-weight: 700;
-    margin: 4.5rem;
+    margin: 7.7rem;
 }
 
 .movie-list__table{
@@ -518,12 +544,13 @@ th, td {padding: 1rem 1rem;}
 }
 
 .block-films__table {
-    width: 100%;
-    border-collapse: collapse;
+    display: flex;
 }
 
 .block-films__movie {
     padding: 2.1rem;
+    flex: 0 0 33.33%;
+    position: relative;
 }
 
 .block-films__movie:hover .block-films__table__description {
@@ -532,6 +559,8 @@ th, td {padding: 1rem 1rem;}
 
 .block-films__table__description {
     position: absolute;
+    display: flex;
+    flex-direction: column ;
     border-radius: 0.75rem;
     background-color: rgb(144, 210, 61, .5);
     left: 0;
@@ -565,6 +594,7 @@ th, td {padding: 1rem 1rem;}
     font-weight: 500;
     color: #ffffff;
     line-height: 1.4;
+    flex: 1;
 }
 
 .block-films__table__sep {
@@ -572,12 +602,6 @@ th, td {padding: 1rem 1rem;}
     height: 0.3rem;
     background: #ffffff;
     margin-bottom: 0.65rem;
-}
-
-.block-films__table__links {
-    position: absolute;
-    bottom: 1.2rem;
-    left: 1.2rem;
 }
 
 .icon {
