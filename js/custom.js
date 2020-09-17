@@ -82,4 +82,53 @@ film_genre_4.innerHTML = films[3].genre;
 console.log(film_start_1)
 
 
+const button = $('#submit');
+const form = $('#form');
+button.on('click', function(event){
+    event.preventDefault();
+    let data = form.serialize()
+    console.log(data)
+    console.log('work');
+    fetch({
+        method: "GET",
+        url: "http://ya.ru",
+        data: data
+    }).then(console.log)
+})
+
+
+// form.onsubmit = function(event){
+//     event.preventDefault();
+
+//     const name = document.getElementsById('name');
+//     const select = document.getElementsById('select');
+//     const radio = document.getElementsById('radio1');
+//     console.log(name, select, radio)
+// }    
+
+
+// function someFormSubmit(){
+//     console.log(5+1);
+// }
+
+//     Object.keys(form.elements).forEach(function(elements){
+//         console.log()
+//         if(form.elements[elements].type != "submit"){
+//             if (form.elements[elements].type == "text"){
+//                 let error = ifExist(form.elements[elements].value);
+//                 if (error){
+//                     alert('Заполните поле')
+//                 }
+//             }
+//         }           
+//     })
+// }
+
+// function ifExist(value){
+//     let error = false;
+//     if(value.trim() == "")
+//         error = true;
+//     return error;
+// }
+
 

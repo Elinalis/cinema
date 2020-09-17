@@ -377,7 +377,8 @@ nav li:first-child {
     font-size: 2.75rem;
     text-align: center;
     font-weight: 700;
-    margin: 7.7rem;
+    margin-top: 7.2rem;
+    margin-bottom: 4.2rem;
 }
 
 .movie-list__table{
@@ -391,7 +392,7 @@ nav li:first-child {
 .movie-list__table th {
     color: #ffffff; 
     background: #a3cc40;
-    font-size: 1.65rem;
+    font-size: 1.5rem;
     font-weight: 700;
     height: 2.2rem;
     width: 1.75rem;
@@ -428,7 +429,7 @@ nav li:first-child {
 
 .table-body__row {
     color: #ffffff; 
-    font-size: 1.25rem;
+    font-size: 1.1rem;
     vertical-align: center;
     font-family: Roboto;
     height: 4.15rem;
@@ -506,7 +507,7 @@ th, td {padding: 1rem 1rem;}
     position: absolute;
     width:34.6rem;
     top: 8.9rem;
-    right: 8.4rem;
+    right: 3rem;
 }
 
 .block-gift__header {
@@ -685,3 +686,16 @@ th, td {padding: 1rem 1rem;}
     min-height: 33.33%;
 }
 
+ .owl-carousel .owl-nav button.owl-prev{
+    position: absolute;
+    left: -30px;
+    top: 44%;
+  }
+  
+  .owl-carousel .owl-nav button.owl-next{
+    position: absolute;
+    right: -30px;
+    top: 44%;
+    background-color: aqua;
+  }
+    
