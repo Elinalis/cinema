@@ -45,41 +45,19 @@ const films = [
     
 ];
 
-// console.log(films[0]);
 
-const film_start_1 = document.getElementById('film_start_1');
-const film_name_1 = document.getElementById('film_name_1');
-const film_genre_1 = document.getElementById('film_genre_1');
-
-const film_start_2 = document.getElementById('film_start_2');
-const film_name_2 = document.getElementById('film_name_2');
-const film_genre_2 = document.getElementById('film_genre_2');
-
-const film_start_3 = document.getElementById('film_start_3');
-const film_name_3 = document.getElementById('film_name_3');
-const film_genre_3 = document.getElementById('film_genre_3');
-
-const film_start_4 = document.getElementById('film_start_4');
-const film_name_4 = document.getElementById('film_name_4');
-const film_genre_4 = document.getElementById('film_genre_4');
-
-film_start_1.innerHTML = films[0].start;
-film_name_1.innerHTML = films[0].name;
-film_genre_1.innerHTML = films[0].genre;
-
-film_start_2.innerHTML = films[1].start;
-film_name_2.innerHTML = films[1].name;
-film_genre_2.innerHTML = films[1].genre;
-
-film_start_3.innerHTML = films[2].start;
-film_name_3.innerHTML = films[2].name;
-film_genre_3.innerHTML = films[2].genre;
-
-film_start_4.innerHTML = films[3].start;
-film_name_4.innerHTML = films[3].name;
-film_genre_4.innerHTML = films[3].genre;
-
-console.log(film_start_1)
+for (let i = 0; i < films.length; i++) {
+    const film = films[i];
+    const filmStartId = 'film_start_' + (i+1);
+    const filmNameId = 'film_name_' + (i+1);
+    const filmGenreId = 'film_genre_' + (i+1);
+    const filmName = document.getElementById (filmNameId);
+    filmName.innerHTML = film.name;
+    const filmStart = document.getElementById (filmStartId);
+    filmStart.innerHTML = film.start;
+    const filmGenre = document.getElementById (filmGenreId);
+    filmGenre.innerHTML = film.genre;
+}
 
 
 const button = $('#submit');
@@ -131,4 +109,92 @@ button.on('click', function(event){
 //     return error;
 // }
 
+
+// Домашка ТЗ-16
+
+// Задача 1
+
+// const superHeroes = [
+//     {
+//         name: 'Thor',
+//         age: 389,
+//         god: true,
+
+//     },
+//     {
+//         name: 'Loki',
+//         age: 234,
+//         god: true,
+
+//     },
+//     {
+//         name: 'IronMan',
+//         age: 38,
+//         god: false,
+
+//     },
+    
+// ];
+
+// console.log (superHeroes)
+
+
+// Задача 2
+
+// let a3 = {
+//     3 : 'hello',
+//     'one' : 'hi',
+//     'testt' : 'vodoley',
+//     'ivan' : 'ivanov'
+// };
+
+//  for(let key in a3) {
+//     if (key.length > 4){
+//         console.log(a3[key]);
+//     };
+//  };
+
+// Задача 3 получилась
+
+// const a7 = {
+//      'key1':'value1',
+//      'key2':'value2', 
+//      'key3':'value3',};
+// const inp_1 = document.getElementById("a7-key_input");
+// const inp_2 = document.getElementById("a7-value_input");
+// const btn = document.getElementById("button_1");
+
+// btn.addEventListener('click', function() {
+//     let key = inp_1.value;
+//     let valInp2 = inp_2.value;
+//     a7[key] = valInp2
+//     console.log(a7);
+//     inp_1.value = "";
+//     inp_2.value = "";
+
+//   })
+
+// Задача 4
+// const a = ['Tor', 'Lokki', 'Odin', 34, 'privet']
+// console.log(a.length) 
+
+// Задача 5 и 6 тоже не получились :(
+
+// const d = [0, 2, 5, -4, 6, 22, -9, -12, ,13, 78];
+
+// for (let i = 0; i < d.length; i++){
+//     if (d[i] % 2 == 0) {
+//         d.push(d.splice(i, 1)[0]);
+// }
+
+// console.log(d);
+
+
+// const a = [2, 3, 4, 5];
+// let result = 1
+// for (let i = 0; i < a.length; i++){
+//  result = result * a[i];}
+// console.log(result);
+
+//Домашка Т3-17
 

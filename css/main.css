@@ -623,6 +623,25 @@ th, td {padding: 1rem 1rem;}
     display: inline-block;
 }
 
+.owl-carousel .owl-nav button.owl-prev{
+    position: absolute;
+    left: -45px;
+    top: 33%;
+    font-weight: 600;
+    font-size: 5rem;
+    color: #90d23d;
+  }
+  
+  .owl-carousel .owl-nav button.owl-next{
+    position: absolute;
+    right: -45px;
+    top: 33%;
+    font-weight: 600;
+    font-size: 5rem;
+    color: #90d23d;
+  }
+    
+
 .map-block {
     width: 100%;
     background: #90d23d;
@@ -686,16 +705,3 @@ th, td {padding: 1rem 1rem;}
     min-height: 33.33%;
 }
 
- .owl-carousel .owl-nav button.owl-prev{
-    position: absolute;
-    left: -30px;
-    top: 44%;
-  }
-  
-  .owl-carousel .owl-nav button.owl-next{
-    position: absolute;
-    right: -30px;
-    top: 44%;
-    background-color: aqua;
-  }
-    
