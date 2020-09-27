@@ -122,3 +122,71 @@ console.log(ts_6_content)
 
 ts_6.innerHTML = ts_6_content
 
+// Домашка ТЗ-17
+
+// Задача 1
+
+const name_input = document.getElementById("name_input");
+const answer = document.getElementById("answer");
+const btn_2 = document.getElementById("button_2");
+function getName(name_input){
+    return name_input.value
+}
+
+
+btn_2.addEventListener('click', function (){
+    console.log (getName(name_input))
+    answer.innerHTML = getName(name_input)
+})
+
+
+// Задача 2
+
+function getLargestExpression(a, b) {
+    
+    if (a >= b) return a;
+        else return b;
+    };
+
+console.log (getLargestExpression(2,10))
+console.log (getLargestExpression(5,1))
+console.log (getLargestExpression(5,5))
+
+// Задача 3
+
+function getRandomNumber(min, max){
+    return min + (Math.random())*(max-min) 
+}
+
+console.log(getRandomNumber(5, 189))
+console.log(getRandomNumber(1, 67))
+console.log(getRandomNumber(9834, 0))
+console.log(getRandomNumber(6, 6))
+
+
+// Домашка Т3-18
+
+// const arr = [10, 12, 15, 21];
+// for (var i = 0; i < arr.length; i++) {
+// setTimeout(function() {
+// console.log('Index: ' + i + ', element: ' + arr[i]);
+// }, 3000);
+// }
+
+// Вариант 1
+
+// const arr = [10, 12, 15, 21];
+// for (let i = 0; i < arr.length; i++) {
+// setTimeout(function() {
+// console.log('Index: ' + i + ', element: ' + arr[i]);
+// }, 3000);
+// }
+
+// Вариант 2
+
+// const arr = [10, 12, 15, 21];
+// for (let i = 0; i < arr.length; i++) {
+// setTimeout(function() {
+// console.log('Index: ' + i + ', element: ' + arr[i]);
+// }, 3000);
+// }
