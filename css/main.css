@@ -542,6 +542,7 @@ th, td {padding: 1rem 1rem;}
 .block-films__text {
     padding-left: 1.75rem;
     padding-bottom: 2.25rem;
+    width: 33rem;
 }
 
 .block-films {

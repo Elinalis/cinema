@@ -185,8 +185,6 @@ console.log(getRandomNumber(6, 6))
 // Вариант 2
 
 // const arr = [10, 12, 15, 21];
-// for (let i = 0; i < arr.length; i++) {
-// setTimeout(function() {
+// for (var i = 0; i < arr.length; i++) {
 // console.log('Index: ' + i + ', element: ' + arr[i]);
-// }, 3000);
-// }
+// };
