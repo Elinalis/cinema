@@ -132,6 +132,7 @@
     font-style: normal;
 }
 
+
 /**Сетка макета*/
 
 .container {
@@ -157,7 +158,7 @@ body{
     margin-right: auto;
     -webkit-text-size-adjust: 100%;
     color: #242424;
-    overflow-x:hidden
+    overflow-x:hidden;
 }
 
 
@@ -167,7 +168,7 @@ img {
 
 input, textarea, select {
     font-family: 'Roboto', sans-serif;
-    font-size: 0.55rem;
+    font-size: 0.8rem;
     color: #6c6c6c;
     padding: 0.75rem 0.55rem;
     border: 1px solid #bebebe;
@@ -195,6 +196,7 @@ select {
  background-color: rgb(144, 210, 61);
  border-radius: 0.75rem;
  border:none;
+ border: 0.1rem solid rgb(144, 210, 61);
 } 
 
 p {
@@ -366,7 +368,7 @@ nav li:first-child {
     width: 10rem;
 }
     
-.block__table {
+.block-table {
     max-width: 57rem;
     margin: 0 auto;
     padding-top: 0.25rem;
@@ -425,6 +427,11 @@ nav li:first-child {
     bottom: 2.1rem;
     border: 0.55rem solid transparent;
     border-bottom: 0.75rem solid #ffffff;
+}
+
+.block-table__checkbox
+{
+    cursor: pointer;
 }
 
 .table-body__row {
@@ -527,8 +534,90 @@ th, td {padding: 1rem 1rem;}
 }
 
 .block-gift__button {
-    padding-top: 1.5rem;
-    padding-left: 22.5rem;
+    position: absolute;
+    top: 13rem;
+    right: 0;
+    width: fit-content;
+    
+}
+
+.button-effect:hover {
+    background-color: transparent;
+    color: rgb(144, 210, 61);
+    
+}
+
+.popup {
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .7);
+}
+
+.hidden {
+    display: none;
+}
+
+.order-form {
+    background: rgb(255, 255, 255);
+    border-radius: 0.7rem;
+    box-shadow: .05rem 0rem .25rem rgb(125, 125, 125) ;
+    box-sizing: border-box;
+    height: 20rem;
+    width: 17rem;
+    padding: 1rem;
+    margin: 7rem auto;
+    position: relative;
+}
+
+.modal__form {
+    font-size: 0.8rem;
+    width: 12rem;
+    margin-top: 1rem;
+    margin-left: 1.4rem;
+}
+
+.input-text {
+    width: 100%;
+    margin-top: 0.5rem;
+
+}
+
+.checkbox {
+    margin-top: 1.2rem;
+}
+
+.button-submit {
+    margin-top: 0.9rem;
+}
+
+.popup-error-message {
+    color: #cc0033;
+    font-size: 0.6rem;
+    line-height: 1.2rem;    
+    display: none;
+}
+
+.error input,
+.error select {
+    background: #fce4e4;
+    border: 0.05rem solid #cc0033;
+    outline: none;
+}
+
+
+.error .popup-error-message {
+    display: block;
+}
+
+.close {
+    display: block;
+    position: absolute;
+    right: 1rem;
+    cursor: pointer;
 }
 
 .block-films__header {
@@ -549,13 +638,11 @@ th, td {padding: 1rem 1rem;}
     padding-bottom: 4.75rem;
 }
 
-.block-films__inner {
-    display: flex;
-}
 
 .block-films__movie {
     padding: 2.1rem;
-    position: relative;
+    position: relative; 
+    display: flex;
     flex: 0 0 33.33%;
 }
 
@@ -576,6 +663,7 @@ th, td {padding: 1rem 1rem;}
     padding: 1.2rem;
     transform: translateY(100%);
     transition: 0.2s;
+    overflow: hidden;
 }
 
 .block-films__relative {

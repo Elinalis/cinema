@@ -31,18 +31,18 @@ console.log (superHeroes)
 
 const ts_2 = document.getElementById('ts_2');
 
-let ts_2_content;
+let ts_2_content = "";
 
 let a3 = {
     3 : 'hello',
     'one' : 'hi',
     'testt' : 'vodoley',
-    'ivan' : 'ivanov'
+    'ivan22' : 'ivanov'
 };
 
  for(let key in a3) {
     if (key.length > 4){
-        ts_2_content = a3[key];
+        ts_2_content += key + ": " + a3[key] + "<br>";
     };
  };
 
@@ -70,7 +70,8 @@ btn.addEventListener('click', function() {
     ts_3_content = "";
     a7[key] = valInp2
     for (key in a7){
-        ts_3_content += `${key} : ${a7[key]} </br> `};
+        ts_3_content += `${key} : ${a7[key]} </br> `
+    };
     inp_1.value = "";
     inp_2.value = "";
     ts_3.innerHTML = ts_3_content
@@ -97,11 +98,11 @@ let d_even = [];
 let d_odd = [];
 
 for (let i = 0; i < d.length; i++){
-    if (d[i] % 2 == 0) {
-        d_even.push(d[i]);
-    } 
+    if (d[i] % 2 == 0) 
+        d_even.push(d[i]); 
     else 
         d_odd.push(d[i]);
+        
 }
 
 ts_5_even.innerHTML =  d_even;
@@ -129,24 +130,30 @@ ts_6.innerHTML = ts_6_content
 const name_input = document.getElementById("name_input");
 const answer = document.getElementById("answer");
 const btn_2 = document.getElementById("button_2");
-function getName(name_input){
-    return name_input.value
+function getName(input){
+    return input.value
 }
-
+function clearInput(input){
+    input.value = ""
+}
 
 btn_2.addEventListener('click', function (){
     console.log (getName(name_input))
     answer.innerHTML = getName(name_input)
+    clearInput(name_input)
 })
+
 
 
 // Задача 2
 
 function getLargestExpression(a, b) {
     
-    if (a >= b) return a;
-        else return b;
-    };
+    if (a >= b) { 
+        return a
+    } 
+    return b
+};
 
 console.log (getLargestExpression(2,10))
 console.log (getLargestExpression(5,1))
@@ -186,5 +193,8 @@ console.log(getRandomNumber(6, 6))
 
 // const arr = [10, 12, 15, 21];
 // for (var i = 0; i < arr.length; i++) {
-// console.log('Index: ' + i + ', element: ' + arr[i]);
-// };
+//     setTimeout((function(j) {
+//         return function(){
+//         console.log('Index: ' + j + ', element: ' + arr[j]);}
+//     })(i), 1000*i);
+// }
