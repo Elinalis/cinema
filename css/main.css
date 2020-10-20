@@ -397,9 +397,10 @@ nav li:first-child {
     font-size: 1.5rem;
     font-weight: 700;
     height: 2.2rem;
-    width: 1.75rem;
+    width: 0.0rem;
 }
 
+/* 
 .movie-list__time::after {
     content: ''; 
     position: absolute;
@@ -407,7 +408,7 @@ nav li:first-child {
     bottom: 1.6rem;
     border: 0.55rem solid transparent;
     border-top: 0.75rem solid #ffffff;
-}
+} */
 
 .movie-list__time {
     text-align: left;
@@ -420,14 +421,14 @@ nav li:first-child {
 }
 
 
-.movie-list__film::after {
+/* .movie-list__film::after {
     content: '';
     position: absolute;
     left: 16rem;
     bottom: 2.1rem;
     border: 0.55rem solid transparent;
     border-bottom: 0.75rem solid #ffffff;
-}
+} */
 
 .block-table__checkbox
 {
@@ -458,16 +459,25 @@ nav li:first-child {
     height: 1.5rem;
 }
 
-.table-body__row-dark {
+tr:nth-child(odd){
     background: #373737;
 }
 
-.table-body__row-light {
-    background: #4b4d4f;
+tr:nth-child(even){
+    background:#4b4d4f;
 }
 
-
 th, td {padding: 1rem 1rem;}
+
+.block-table__checkbox {
+    position: absolute;
+	z-index: -1;
+	opacity: 0;
+	display: block;
+	width: 0;
+	height: 0;
+}
+
 
 
 .table__text-after {
