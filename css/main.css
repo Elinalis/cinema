@@ -397,18 +397,22 @@ nav li:first-child {
     font-size: 1.5rem;
     font-weight: 700;
     height: 2.2rem;
-    width: 0.0rem;
+    width: fit-content;
 }
 
-/* 
+.movie-list__ganre {
+    padding-left: 2rem;
+}
+
+
 .movie-list__time::after {
     content: ''; 
     position: absolute;
-    left: 8rem;
-    bottom: 1.6rem;
+    left: 11.6rem;
+    bottom: 1.01rem;
     border: 0.55rem solid transparent;
     border-top: 0.75rem solid #ffffff;
-} */
+}
 
 .movie-list__time {
     text-align: left;
@@ -421,14 +425,14 @@ nav li:first-child {
 }
 
 
-/* .movie-list__film::after {
+.movie-list__film::after {
     content: '';
     position: absolute;
-    left: 16rem;
-    bottom: 2.1rem;
+    left: 14.1rem;
+    bottom: 1.6rem;
     border: 0.55rem solid transparent;
     border-bottom: 0.75rem solid #ffffff;
-} */
+}
 
 .block-table__checkbox
 {
@@ -479,6 +483,22 @@ th, td {padding: 1rem 1rem;}
 }
 
 
+.table-button {
+    z-index: 1;
+    padding: 1rem 1.1rem;
+    width: 7rem;
+    font-size: 1rem;
+    color: #ffffff;
+    border-radius: 0.75rem;
+    background-color: rgb(144, 210, 61);
+    border:none;
+    border: 0.1rem solid rgb(144, 210, 61);
+} 
+
+
+.top-0 {
+    margin-top: 0;
+}
 
 .table__text-after {
     text-align: center;
@@ -582,6 +602,69 @@ th, td {padding: 1rem 1rem;}
     margin: 7rem auto;
     position: relative;
 }
+
+.order-form2 {
+    background: rgb(255, 255, 255);
+    border-radius: 0.7rem;
+    box-shadow: .05rem 0rem .25rem rgb(125, 125, 125) ;
+    box-sizing: border-box;
+    height: 20rem;
+    width: 47rem;
+    padding: 1rem;
+    margin-left: 12rem;
+    margin-top: 7rem;
+    position: relative;
+}
+
+
+.places{ 
+    position: absolute;
+    margin-left: 7rem;
+    margin-top: 1rem; 
+    border-style: solid .3rem;
+    border-radius: 0.75rem;
+    overflow: hidden;
+}
+
+.places tr{
+    background-color: #373737;
+    padding: 0.2rem;
+}
+
+.places td{
+    padding: 0.6rem;
+    
+}
+
+.place{
+    background-color: rgb(144, 210, 61);
+    text-align: center;
+    border-radius: 0.5rem;
+    border-color: black;
+    height: 1.8rem;
+    width: 1.8rem;
+    color: #ffffff;   
+}
+
+.booking {
+    background-color: gray;
+}
+
+.button-order {
+    position: absolute;
+    z-index: 1;
+    padding: 0.4rem 0.5rem;
+    margin: 10.9rem 18rem;
+    width: 8rem;
+    height: 2rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: rgb(144, 210, 61);
+    border-radius: 0.75rem;
+    border: none;
+    border: 0.1rem solid rgb(144, 210, 61);
+   }
+
 
 .modal__form {
     font-size: 0.8rem;
@@ -731,7 +814,7 @@ th, td {padding: 1rem 1rem;}
     color: #90d23d;
   }
   
-  .owl-carousel .owl-nav button.owl-next{
+.owl-carousel .owl-nav button.owl-next{
     position: absolute;
     right: -45px;
     top: 33%;

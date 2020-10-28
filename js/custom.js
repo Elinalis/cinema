@@ -5,45 +5,6 @@ const initOwl = function() {
 }
 
 
-// const genre_1 = 'фэнтези';
-// const genre_2 = 'боевик';
-// const genre_3 = 'комедия';
-// const genre_4 = 'мультфильм';
-// const genre_5 = 'драма';
-// const genre_6 = 'фантастика';
-// const genre_7 = 'приключения';
-
-
-// const films = [
-//     {
-//         start: '10:00',
-//         name: 'Человек-паук',
-//         genre: `${genre_6}, ${genre_2}, ${genre_7}`,
-//     },
-
-//     {
-//         start: '12:00',
-//         name: 'Собачья жизнь 2',
-//         genre: `${genre_1}, ${genre_5}, ${genre_3}`,
-
-//     },
-
-//     {
-//         start: '14:00',
-//         name: 'История игрушек 4',
-//         genre: `${genre_4}, ${genre_1}, ${genre_3}`,
-    
-//     },
-
-//     {
-//         start: '16:00',
-//         name: 'Люди в черном: Интернэшнл',
-//         genre: `${genre_6}, ${genre_2}, ${genre_3}`, 
-//     },
-
-    
-// ];
-
 
 // for (let i = 0; i < films.length; i++) {
 //     const film = films[i];
@@ -108,7 +69,10 @@ const initOwl = function() {
 // }
 
 
-// Pop-up
+
+
+
+// Pop-up Получить подарок
 
 const closePopupButton = document.getElementById('popup-close');
 const openPopupButton = document.getElementById('popup-open');
@@ -148,7 +112,7 @@ sendForm.onclick = function(event) {
     if (!checkInput(name.value)){
         nameParent.classList.add('error')
         nameParent.getElementsByClassName('popup-error-message')[0].innerHTML = 'Заполните поле "Имя"'
-       
+        document.getElementById('select').classList.add('top-0')
     }
     
     if (select.value == 0){
@@ -178,6 +142,7 @@ function checkInput(value) {
 const url = 'https://kinopoiskapiunofficial.tech/api/v2.1/'
 const filmsElement = document.getElementById('posters')
 const tableFilmsElement = document.getElementById("filmsHire")
+const popupOrderElement = document.getElementById("modal__form2")
 const films = [
     464963,
     301,
@@ -219,6 +184,8 @@ const parseFilm = function (data) {
         link: data.webUrl
     }
 }
+
+
 
 const film = 
 {
@@ -283,47 +250,62 @@ const film =
 
     },
 
-    // renderFilmRow: function() {
-    //    return `<tr class="table-body__row">
-    //    <td>
-    //      <input type="checkbox" class= "block-table__checkbox">
-    //      <label for="block-table__checkbox"><i class= "icon icon-check" title="check"></i></label>
-    //    </td>
-    //    <td id="film_start_1" class="table__row-time">${film.getStart.call(this)}</td>
-    //    <td id="film_name_1">${this.nameRu}</td>
-    //    <td id="film_genre_1">${film.getGenre.call(this)}</td>
-    //     </tr>`
-    // },
+    getPrice: function () {
+        function getRandomNumber(min, max){
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random()*(max-min+1)) + min;
+        }
+    
+        let price1, price2;
+    
+        price1 = getRandomNumber(1, 2);
+        price2 = getRandomNumber(1, 9);
+    
+        return `${price1}${price2}0`
+    },
 
-    // renderFilmBlock: function() {
-    //     return `<div class="block-films__movie">
-    //     <div class="block-films__relative">
-    //         <div class="block-films__table__bg"><img class="link-img" src="${this.getImg}"></div>
-    //             <div class="block-films__table__description">
-    //             <div class="block-films__table__header">${this.name}</div>
-    //             <div class="block-films__table__sep"></div>
-    //             <div class="block-films__table__text">${this.description}</div>
-    //             <div class="block-films__table__links">
-    //             <a href='https://www.facebook.com/' target="_blank"><i class="icon" title="facebook">
-    //                 <img src="icons/facebook.png">
-    //                 </i></a>
-    //             <a href='https://twitter.com/' target="_blank"><i class="icon" title="twitter">
-    //                 <img src="icons/twitter.png">
-    //                 </i></a>
-    //             <a href='https://www.behance.net/' target="_blank"><i class="icon" title="behance">
-    //                 <img src="icons/behance.png">
-    //                 </i></a>
-    //             <a href='https://dribbble.com/' target="_blank"><i class="icon" title="dribbble">
-    //                 <img src="icons/dribbble.png">
-    //                 </i></a>
-    //             </div>
-    //         </div>
-    //     </div>
-    // </div>`;     
-    // }
+    renderFilmRow: function() {
+       return `<tr class="table-body__row">
+                    <td>
+                    <input type="checkbox" class="block-table__checkbox" id="tick" value="yes">
+                    <label for="tick"><i class= "icon icon-check" title="check"></i></label>
+                    </td>
+                    <td id="film_start_1" class="table__row-time">${film.getStart.call(this)}</td>
+                    <td id="film_name_1">${film.getName.call(this)}</td>
+                    <td id="film_genre_1">${film.getStart.call(this)}</td>
+                    <td id="film_genre_1">${film.getPrice.call(this)}</td>
+                </tr>` 
+    },
+
+    renderFilmBlock: function() {
+        return `<div class="block-films__movie">
+        <div class="block-films__relative">
+            <div class="block-films__table__bg"><img class="link-img" src="${film.getImg.call(this)}"></div>
+                <div class="block-films__table__description">
+                <div class="block-films__table__header">${film.getName.call(this)}</div>
+                <div class="block-films__table__sep"></div>
+                <div class="block-films__table__text">${film.getDescription.call(this)}</div>
+                <div class="block-films__table__links">
+                <a href='https://www.facebook.com/' target="_blank"><i class="icon" title="facebook">
+                    <img src="icons/facebook.png">
+                    </i></a>
+                <a href='https://twitter.com/' target="_blank"><i class="icon" title="twitter">
+                    <img src="icons/twitter.png">
+                    </i></a>
+                <a href='https://www.behance.net/' target="_blank"><i class="icon" title="behance">
+                    <img src="icons/behance.png">
+                    </i></a>
+                <a href='https://dribbble.com/' target="_blank"><i class="icon" title="dribbble">
+                    <img src="icons/dribbble.png">
+                    </i></a>
+                </div>
+            </div>
+        </div>
+    </div>`;     
+    }
 
 }
-
 
 
 const generateFilmItem = function ({name, country, genre, year, description, img, link}) {
@@ -374,9 +356,15 @@ const generateTableItem = function ({name, genre}){
             time2 = getRandomNumber(0, 3)
     }
 
-    const time = `${time1}${time2} : ${time3}${time4}`
+    let price1, price2;
 
-        return `<tr class="table-body__row">
+    price1 = getRandomNumber(1, 2);
+    price2 = getRandomNumber(1, 9);
+
+    const time = `${time1}${time2} : ${time3}${time4}`
+    const price = `${price1}${price2}0`
+
+    return `
             <td>
             <input type="checkbox" class="block-table__checkbox" id="tick" value="yes">
             <label for="tick"><i class= "icon icon-check" title="check"></i></label>
@@ -384,24 +372,137 @@ const generateTableItem = function ({name, genre}){
             <td id="film_start_1" class="table__row-time">${time}</td>
             <td id="film_name_1">${name}</td>
             <td id="film_genre_1">${genre}</td>
-          </tr>`       
+            <td id="film_genre_1">${price}</td>`
+               
 };
 
+// Pop-up Таблица
 
-let element, prepareFilm;
+
+
+const closePopupOrder = document.getElementById('closeOrderFrom');
+const sendForm2 = document.getElementById('sendOrder');
+const popup2 = document.getElementById('orderForm');
+
+closePopupOrder.onclick = function(event) {
+    event.preventDefault();
+    orderForm.classList.add('hidden')
+}
+
+tableFilmsElement.onclick = function(event) {
+    event.preventDefault();
+    orderForm.classList.remove('hidden')
+}
+
+const generateModalFormItem = function (){
+
+    function getRandomNumber(min, max){
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random()*(max-min+1)) + min;
+    }
+
+    let time5, time6, time7, time8;
+
+    time5 = getRandomNumber(0, 2);
+    time7 = getRandomNumber(0, 5);
+    time8 = getRandomNumber(0, 9)
+
+        switch(time5){
+        case 0:
+        case 1:
+            time6 = getRandomNumber(0, 9)
+        default:
+            time6 = getRandomNumber(0, 3)
+    }
+
+    let price4, price5;
+
+    price4 = getRandomNumber(1, 2);
+    price5 = getRandomNumber(1, 9);
+
+    const timeOrder = ` ${time5}${time6} : ${time7}${time8}`
+    const priceOrder = ` ${price4}${price5}0`
+    const nameOrder = ` Матрица`
+    const genreOrder = ` Боевик, фантастика`
+
+    return `<div id="orderFilmName">Фильм:${nameOrder}</div></div>
+    <div id= "orderFilmStart">Время:${timeOrder}</div>  
+    <div id= "orderFilmGanar">Жанр:${genreOrder}</div>  
+    <div  id="orderFilmPrice">Цена:${priceOrder}</div>  
+    <div>
+      <table class="places">
+        <tr>
+          <td><div class="place">1</div></td>
+          <td><div class="place booking">2</div></td>
+          <td><div class="place">3</div></td>
+          <td><div class="place">4</div></td>
+          <td><div class="place booking">5</div></td>
+          <td><div class="place booking">6</div></td>
+          <td><div class="place booking">7</div></td>
+          <td><div class="place">8</div></td>
+          <td><div class="place">9</div></td>
+          <td><div class="place">10</div></td>
+        </tr>
+        <tr>
+          <td><div class="place booking">11</div></td>
+          <td><div class="place">12</div></td>
+          <td><div class="place">13</div></td>
+          <td><div class="place booking">14</div></td>
+          <td><div class="place booking">15</div></td>
+          <td><div class="place">16</div></td>
+          <td><div class="place">17</div></td>
+          <td><div class="place booking">18</div></td>
+          <td><div class="place booking">19</div></td>
+          <td><div class="place booking">20</div></td>
+        </tr>
+        <tr>
+          <td><div class="place">21</div></td>
+          <td><div class="place">22</div></td>
+          <td><div class="place booking">23</div></td>
+          <td><div class="place booking">24</div></td>
+          <td><div class="place">25</div></td>
+          <td><div class="place">26</div></td>
+          <td><div class="place booking">27</div></td>
+          <td><div class="place">28</div></td>
+          <td><div class="place booking">29</div></td>
+          <td><div class="place">30</div></td>
+        </tr>
+      </table>`       
+};
+
+let element;
 const requests = [];
 films.forEach(function(item, i, arr){
-    let film = getFilmById(item)
-        film.then(result => {
-            // let name = film.renderFilmRow.call(result.data)
-            // console.log(name)
-            prepareFilm = parseFilm(result);
+    let filmRequest = getFilmById(item)
+        .then(result => {
+            const prepareFilm = parseFilm(result);
             element = generateFilmItem({...prepareFilm});
-            tableElement = generateTableItem({...prepareFilm})
+            const tableElement = generateTableItem({...prepareFilm})
+            const trElement = document.createElement('tr')
+            trElement.classList.add('table-body__row')
+            trElement.innerHTML = tableElement
             filmsElement.insertAdjacentHTML('beforeEnd', element)
-            tableFilmsElement.insertAdjacentHTML('beforeEnd', tableElement)
+            tableFilmsElement.appendChild(trElement)
+            trElement.onclick = function() {
+                document.getElementById('orderFilmName').innerText = `Фильм: ${prepareFilm.name}`
+                document.getElementById('orderFilmStart').innerText = `Время: `
+                document.getElementById('orderFilmGanar').innerText = `Жанр: ${prepareFilm.genre}`
+            }
+
+        
         })
-    requests.push (film)
+    requests.push (filmRequest)
 })
+
+const popupElement = generateModalFormItem();
+popupOrderElement.insertAdjacentHTML('beforeEnd', popupElement);
+
+
 console.log(requests)
 Promise.all(requests).then(()=>{initOwl()})
+
+
+
+
+

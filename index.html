@@ -98,55 +98,18 @@
         <div class="movie-list">
           <h2 class="movie-list__header" id = "booktickets">Выберите фильм</h2>
           <div >
-          <table class="movie-list__table" id="filmsHire">
-            <tr>
-              <th></th>
-              <th class="movie-list__time">Начало сеанса <i class="icon icon-up"></i></th>
-              <th class="movie-list__film">Название фильма <i class="icon icon-down"></i></th>
-              <th class="movie-list__ganre">Жанр</th>
-          </tr>
+            <table class="movie-list__table">
+                <tr>
+                  <th></th>
+                  <th class="movie-list__time">Начало сеанса</th>
+                  <th class="movie-list__film">Название фильма</th>
+                  <th class="movie-list__ganre">Жанр</th>
+                  <th class="movie-list__price">Цена</th>
 
-            
-              <!-- <tr class="table-body__row table-body__row-dark">
-                <td>
-                  <input type="checkbox" class="block-table__checkbox">
-                  <label for="block-table__checkbox"><i class= "icon icon-check" title="check"></i></label>
-                </td>
-                <td id="film_start_1" class="table__row-time"></td>
-                <td id="film_name_1"></td>
-                <td id="film_genre_1"></td>
               </tr>
-
-              <tr class="table-body__row table-body__row-light">
-                <td>
-                  <input type="checkbox" class= "block-table__checkbox">
-                  <label for="block-table__checkbox"><i class= "icon icon-check" title="check"></i></label>
-                </td>
-                <td id="film_start_2" class="table__row-time"></td>
-                <td id="film_name_2"></td>
-                <td id="film_genre_2"></td>
-              </tr>
-
-              <tr class="table-body__row table-body__row-dark">
-                <td>
-                  <input type="checkbox" class= "block-table__checkbox">
-                  <label for="block-table__checkbox"><i class= "icon icon-check" title="check"></i></label>
-                </td>
-                <td id="film_start_3" class="table__row-time"></td>
-                <td id="film_name_3"></td>
-                <td id="film_genre_3"></td>
-              </tr>
-
-              <tr class="table-body__row table-body__row-light">
-                <td>
-                  <input type="checkbox" class= "block-table__checkbox">
-                  <label for="block-table__checkbox"><i class= "icon icon-check" title="check"></i></label>
-                </td>
-                <td id="film_start_4" class="table__row-time"></td>
-                <td id="film_name_4"></td>
-                <td id="film_genre_4"></td>
-              </tr> -->
-          </table>
+              <tbody id="filmsHire" >
+              </tbody>   
+            </table>
         </div>
         </div>
       </div>
@@ -183,6 +146,7 @@
             </p>
           </div>
             <a href ="#" id="popup-open" class="button block-gift__button button-effect">Получить подарок</a>
+            
             <div id="popup" class="popup hidden">
               <form class="order-form">
                     <div id = "popup-close" class="close">
@@ -213,6 +177,65 @@
               </div>
             </form>
           </div>
+
+        <div id="orderForm" class="popup hidden">
+            <form class="order-form2">
+                  <div id = "closeOrderFrom" class="close">
+                      <i class="icon icon-cross" title="cross"></i>
+                  </div>
+                  <div class="modal__form2" id="modal__form2">
+                    <!-- <div id="orderFilmName">Фильм:</div></div>
+                    <div id= "orderFilmStart">Время:</div>  
+                    <div id= "orderFilmGanar">Жанр:</div>  
+                    <div  id="orderFilmPrice">Цена:</div>  
+                    <div>
+                      <table class="places">
+                        <tr>
+                          <td><div class="place">1</div></td>
+                          <td><div class="place booking">2</div></td>
+                          <td><div class="place">3</div></td>
+                          <td><div class="place">4</div></td>
+                          <td><div class="place booking">5</div></td>
+                          <td><div class="place booking">6</div></td>
+                          <td><div class="place booking">7</div></td>
+                          <td><div class="place">8</div></td>
+                          <td><div class="place">9</div></td>
+                          <td><div class="place">10</div></td>
+                        </tr>
+                        <tr>
+                          <td><div class="place booking">11</div></td>
+                          <td><div class="place">12</div></td>
+                          <td><div class="place">13</div></td>
+                          <td><div class="place booking">14</div></td>
+                          <td><div class="place booking">15</div></td>
+                          <td><div class="place">16</div></td>
+                          <td><div class="place">17</div></td>
+                          <td><div class="place booking">18</div></td>
+                          <td><div class="place booking">19</div></td>
+                          <td><div class="place booking">20</div></td>
+                        </tr>
+                        <tr>
+                          <td><div class="place">21</div></td>
+                          <td><div class="place">22</div></td>
+                          <td><div class="place booking">23</div></td>
+                          <td><div class="place booking">24</div></td>
+                          <td><div class="place">25</div></td>
+                          <td><div class="place">26</div></td>
+                          <td><div class="place booking">27</div></td>
+                          <td><div class="place">28</div></td>
+                          <td><div class="place booking">29</div></td>
+                          <td><div class="place">30</div></td>
+                        </tr>
+                      </table> -->
+                    </div>
+
+                    <div class="input-wrap">
+                      <button class="button-order button-effect" type="submit" id="sendOrder">Заказать</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
         </div>
       </div>
     </div>
@@ -262,10 +285,10 @@
     </div>
     <footer>
 
+
       <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
       <script src="js/jquery.js"></script>
-      <script src="js/custom.js"></script>
-      <script type="text/babel" src="babel.config.json"></script>
+      <script type="text/babel" src="js/custom.js"></script>
       <script src="js/plugins/owlcarousel/js/owl.carousel.min.js"></script>
     </body>
 
